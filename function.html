@@ -14,9 +14,15 @@
     console.log(r);
 
     function valueChange(a, b, c) {
-      return a + b + c;
+      if(typeof(a) === "string") {
+        if(typeof(b) === "string") {
+          if(typeof(c) === "string") {
+            return a + b + c;
+          }
+        }
+      }
     }
-    r = valueChange("안녕하세요","홀쭉", "님");
+    r = valueChange(1, 2, 3);
     console.log(r);
   </script>
 </body>
