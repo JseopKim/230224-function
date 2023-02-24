@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+  </div>
+  <script>
+    let root = document.getElementById('root');
+    function subCalculator(firstValue, secondValue) {
+      if(firstValue > secondValue) {
+        subtract_result = firstValue - secondValue;
+      }
+      else {
+        subtract_result = secondValue - firstValue;
+      }
+      return "값 : " + subtract_result;
+    }
+
+    function addCalculator(firstValue, secondValue) {
+      add_result = firstValue + secondValue;
+      return "값 : " + add_result;
+    }
+
+    function mulCalculator(firstValue, secondValue) {
+      mul_result = firstValue * secondValue;
+      return "값 : " + mul_result;
+    }
+
+    function divCalculator(firstValue, secondValue) {
+      if(secondValue === 0) {
+        return "0으로 나눌 수 없습니다."
+      }
+      else {
+        div_result = firstValue / secondValue;
+        return "값 : " + div_result;
+      }
+    }
+    root.children[0].innerHTML = addCalculator(100, 20);
+    root.children[1].innerHTML = subCalculator(100, 20);
+    root.children[2].innerHTML = mulCalculator(100, 20);
+    root.children[3].innerHTML = divCalculator(100, 20);
+  </script>
+</body>
+</html>
